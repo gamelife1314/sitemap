@@ -21,7 +21,7 @@ Documentation:
 view help::
 
     > sitemap-tool --help
-     _ _
+         _ _
      ___(_) |_ ___ _ __ ___   __ _ _ __    author:   gamelife1314
     / __| | __/ _ \ '_ ` _ \ / _` | '_ \   homepage: https://github.com/gamelife1314/sitemap
     \__ \ | ||  __/ | | | | | (_| | |_) |  email:    fudenglong1417@gmail.com
@@ -38,9 +38,12 @@ view help::
     UslSet Options:
         --changefreq <changefreq>   set the update frequency of site. eg: always, hourly, daily, weekly, monthly.
         --lastmod <lastmod>         set the last modified time. eg: 2016-06-30.
+        --xml-file <xmlfile>        set the name of xmlfile.[default: sitemap.xml]
+        --txt-file <xmlfile>        set the name of xmlfile.[default: sitemap.txt]
 
     Log options:
         --log-level <level>         set log level, eg: DEBUG, INFO, ERROR, WARNING, CRITICAL.[default: DEBUG]
+
 
 example::
 

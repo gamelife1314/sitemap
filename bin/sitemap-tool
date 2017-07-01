@@ -24,6 +24,8 @@ Options:
 UslSet Options:
     --changefreq <changefreq>   set the update frequency of site. eg: always, hourly, daily, weekly, monthly.
     --lastmod <lastmod>         set the last modified time. eg: 2016-06-30.
+    --xml-file <xmlfile>        set the name of xmlfile.[default: sitemap.xml]
+    --txt-file <xmlfile>        set the name of xmlfile.[default: sitemap.txt]
 
 Log options:
     --log-level <level>         set log level, eg: DEBUG, INFO, ERROR, WARNING, CRITICAL.[default: DEBUG]
@@ -34,7 +36,7 @@ sitemap_log.setLevel(args["--log-level"].upper())
 urlset = UrlSet(entry=args["<domain>"], changefreq=args["--changefreq"], lastmod=args["--lastmod"])
 spider = Spider(entry=args["<domain>"], urlset=urlset)
 spider.start()
-urlset.save_xml()
-urlset.save_txt()
+urlset.save_xml(args["--xml-file"])
+urlset.save_txt(args["--txt-file"])
 sitemap_log.info("Get %s urls", len(urlset))
 
