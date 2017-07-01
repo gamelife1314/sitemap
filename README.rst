@@ -1,5 +1,9 @@
 sitemap: python3 sitemap generators.
 ====================================
+.. image:: https://travis-ci.org/gamelife1314/sitemap.svg?branch=master
+    :target: https://travis-ci.org/gamelife1314/sitemap
+.. image:: https://img.shields.io/badge/python-3.5,3.6-blue.svg
+    :target: https://github.com/gamelife1314/sitemap
 
 Install
 -------
