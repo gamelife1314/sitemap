@@ -1,0 +1,7 @@
+
+--index https://pypi.douban.com/simple
+
+requests
+pyquery
+docopt
+colorama
