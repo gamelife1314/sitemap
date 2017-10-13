@@ -73,6 +73,7 @@ class Spider(object):
 
         sitemap_log.info("Spider have crawled %s urls", len(self.__urlset))
 
+
 if __name__ == '__main__':
     urlset = UrlSet(entry="http://blog.fudenglong.site/")
     spider = Spider(entry="http://blog.fudenglong.site/", urlset=urlset)

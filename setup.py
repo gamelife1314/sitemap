@@ -9,12 +9,9 @@ install_requires = [
 ]
 
 setup(
-    name='sitemap',
-    version='0.1',
+    name='apsitemap',
+    version='0.2.3',
     packages=find_packages(),
-    scripts=[
-        "./bin/sitemap-tool"
-    ],
     url='https://github.com/gamelife1314/sitemap',
     license='MIT',
     author='Gamelife',
@@ -29,4 +26,9 @@ setup(
     ],
     platforms=["all"],
     tests_require=["pytest"],
+    entry_points={
+        "console_scripts": [
+            "apsitemap=apsitemap.main:main"
+        ]
+    }
 )

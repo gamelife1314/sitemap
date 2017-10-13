@@ -2,9 +2,9 @@
 # encoding: utf-8
 from docopt import docopt
 
-from sitemap.spider import Spider
-from sitemap.urlset import UrlSet
-from sitemap.utility import sitemap_log
+from .spider import Spider
+from .urlset import UrlSet
+from .utility import sitemap_log
 
 _app_doc = """
      _ _                               
@@ -15,7 +15,7 @@ _app_doc = """
                               |_|    
 
 Usage: 
-    sitemap-tool  <domain> [options]  
+    apsitemap  <domain> [options]  
 
 Options:
     -h, --help     view help.
@@ -31,12 +31,13 @@ Log options:
     --log-level <level>         set log level, eg: DEBUG, INFO, ERROR, WARNING, CRITICAL.[default: DEBUG]
 """
 
-args = docopt(_app_doc, version="0.1")
-sitemap_log.setLevel(args["--log-level"].upper())
-urlset = UrlSet(entry=args["<domain>"], changefreq=args["--changefreq"], lastmod=args["--lastmod"])
-spider = Spider(entry=args["<domain>"], urlset=urlset)
-spider.start()
-urlset.save_xml(args["--xml-file"])
-urlset.save_txt(args["--txt-file"])
-sitemap_log.info("Get %s urls", len(urlset))
 
+def main():
+    args = docopt(_app_doc, version="0.2.3")
+    sitemap_log.setLevel(args["--log-level"].upper())
+    urlset = UrlSet(entry=args["<domain>"], changefreq=args["--changefreq"], lastmod=args["--lastmod"])
+    spider = Spider(entry=args["<domain>"], urlset=urlset)
+    spider.start()
+    urlset.save_xml(args["--xml-file"])
+    urlset.save_txt(args["--txt-file"])
+    sitemap_log.info("Get %s urls", len(urlset))

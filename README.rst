@@ -10,17 +10,14 @@ Install
 
 via pip ::
 
-    pip3 install https://github.com/gamelife1314/sitemap/archive/master.zip
-via source code ::
-
-    python3 setup.py install
+    pip install apsitemap
 
 
 Documentation:
 
 view help::
 
-    > sitemap-tool --help
+    > apsitemap --help
          _ _
      ___(_) |_ ___ _ __ ___   __ _ _ __    author:   gamelife1314
     / __| | __/ _ \ '_ ` _ \ / _` | '_ \   homepage: https://github.com/gamelife1314/sitemap
@@ -47,6 +44,6 @@ view help::
 
 example::
 
-    sitemap-tool http://blog.fudenglong.site/ --log-level info --changefreq weekly --lastmod 2017-07-01
-    sitemap-tool http://blog.fudenglong.site/
+    apsitemap http://blog.fudenglong.site/ --log-level info --changefreq weekly --lastmod 2017-07-01
+    apsitemap http://blog.fudenglong.site/
 
